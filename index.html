@@ -93,5 +93,37 @@
 
     <script type="text/javascript" src="pizzas.js"></script>
     <script type="text/javascript" src="script.js"></script>
+    
+<!-- Modal de Pagamento -->
+
+<div id="paymentModal" style="display: none;">
+    <div class="payment-modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Forma de Pagamento</h2>
+        <p>Escolha a forma de pagamento:</p>
+        <button class="payment-button" data-payment="credit-card">Cartão de Crédito/Débito</button>
+        <button class="payment-button" data-payment="pix">Pix</button>
+        <button class="payment-button" data-payment="cash">Dinheiro</button>
+        <div class="credit-card-form" style="display: none;">
+            <h3>Dados do Cartão de Crédito</h3>
+            <label for="cardNumber">Número do Cartão</label>
+            <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000" />
+            <label for="cardName">Nome no Cartão</label>
+            <input type="text" id="cardName" placeholder="Nome Completo" />
+            <label for="expiryDate">Data de Expiração</label>
+            <input type="text" id="expiryDate" placeholder="MM/AA" />
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="123" />
+            <button class="confirm-payment">Confirmar Pagamento</button>
+        </div>
+        <div class="payment-details" style="display: none;">
+            <!-- Aqui será exibido o QR code ou a pergunta sobre troco -->
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/umd/qrious.min.js"></script>
+
 </body>
 </html>
